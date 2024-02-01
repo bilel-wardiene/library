@@ -1,0 +1,48 @@
+<%- include('parts/top.ejs')%>
+<br>
+<br>
+<br>
+<br>
+
+<div class="container">
+  <form method="post" action="/update/<%= books._id %>" enctype="multipart/form-data">
+    <div class="mb-3">
+      <label>Book Title</label>
+      <input type="text" class="form-control" name="title" value="<%= books.title %>">
+    </div>
+    <div class="mb-3">
+      <label>Description</label>
+      <textarea type="text" class="form-control" name="description"><%= books.description %></textarea>
+    </div>
+    <div class="mb-3">
+      <label>Author</label>
+      <input type="text" class="form-control" name="author" value="<%= books.author %>">
+    </div>
+    <div class="mb-3">
+      <label>Price</label>
+      <input type="number" class="form-control" name="price" value="<%= books.price %>">
+    </div>
+    <img src="/uploads/<%= books.image %>" width="100" height="100" alt="">
+
+    <div class="mb-3">
+      <label>Image</label>
+      <input type="file" class="form-control" name="image">
+    </div>
+
+    <% if(emessage){ %>
+      <div class="alert alert-danger">
+        <%=emessage %>
+      </div>
+    <% } %>
+
+    <% if(message){ %>
+      <div class="alert alert-success">
+        <%=message %>
+      </div>
+    <% } %>
+
+    <button type="submit" class="btn btn-primary">Update</button>
+  </form>
+</div>
+
+<%- include('parts/bottom.ejs')%>

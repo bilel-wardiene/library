@@ -1,0 +1,30 @@
+<%- include('parts/top.ejs')%>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <div class="container">
+    <form method="post" action="/login">
+      <!-- Email input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="email" id="form1Example1" name="email" class="form-control" placeholder="email" />
+
+      </div>
+
+      <!-- Password input -->
+      <div data-mdb-input-init class="form-outline mb-4">
+        <input type="password" id="form1Example2" name="password" class="form-control" placeholder="password" />
+      </div>
+      <% if(message){ %>
+        <div class="alert alert-danger">
+          <%=message %>
+        </div>
+        <% } %>
+          <!-- Submit button -->
+          <button data-mdb-ripple-init type="submit" class="btn btn-primary btn-block">Login</button>
+    </form>
+
+  </div>
+  <%- include('parts/bottom.ejs')%>

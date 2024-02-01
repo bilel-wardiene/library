@@ -1,0 +1,3 @@
+exports.getAbout = function(req,res){
+    res.render('about',{verifUser:req.session.userId})
+}

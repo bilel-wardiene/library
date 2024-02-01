@@ -1,0 +1,22 @@
+<%- include('parts/top.ejs')%>   
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="container text-center">
+    <div class="row">
+      
+      <div class="col">
+        <img style="height: 350px;" src="/uploads/<%= books.image %>" alt="">
+      </div>
+      <div class="col">
+        <h1><%= books.title %></h1> <h4><%= books.author %></h4>
+        <span>$<%= books.price %></span>
+        <p><%= books.description %></p>
+      </div>
+    </div>
+  </div>
+
+<%- include('parts/bottom.ejs')%>   
